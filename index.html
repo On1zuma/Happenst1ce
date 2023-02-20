@@ -12,6 +12,8 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <script src="scroll.js" defer></script>
     <title>Happenst1ce</title>
   </head>
   <body>
@@ -21,11 +23,27 @@
         <a href="" class="desktop">Home</a>
         <a href="" class="desktop">About</a>
         <a href="" class="desktop">Download</a>
-        <a href="" class="burger"><i class="fa-solid fa-bars"></i></a>
+
+        <button class="burger" id="xBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </nav>
     </header>
 
-    <section style="background-image: url('img/background/head.jpeg')">
+    <div class="backblur"></div>
+    <div class="blur"></div>
+
+    <aside>
+      <button class="close"><i class="fa-solid fa-x"></i></button>
+      <a href="">Home</a>
+      <a href="">About</a>
+      <a href="">Download</a>
+    </aside>
+
+    <section
+      style="background-image: url('img/background/head.jpeg')"
+      class="active"
+    >
       <div class="content">
         <h1>Happenst1ce</h1>
         <p>
