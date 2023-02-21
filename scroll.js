@@ -31,5 +31,4 @@ document.addEventListener("scroll", () => {
   }); //check the section
 
   document.lastScrollPosition = window.pageYOffset;
-  console.log(window.scrollY);
 });

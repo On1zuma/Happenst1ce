@@ -14,15 +14,16 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
     <script src="scroll.js" defer></script>
+    <script src="blur.js" defer></script>
     <title>Happenst1ce</title>
   </head>
   <body>
     <header>
       <a href="" class="logo">Happenst1ce</a>
       <nav class="right">
-        <a href="" class="desktop">Home</a>
-        <a href="" class="desktop">About</a>
-        <a href="" class="desktop">Download</a>
+        <a href="#Home" class="desktop">Home</a>
+        <a href="#About" class="desktop">About</a>
+        <a href="#Download" class="desktop">Download</a>
 
         <button class="burger" id="xBtn">
           <i class="fa-solid fa-bars"></i>
@@ -35,23 +36,28 @@
 
     <aside>
       <button class="close"><i class="fa-solid fa-x"></i></button>
-      <a href="">Home</a>
-      <a href="">About</a>
-      <a href="">Download</a>
+      <a href="#Home">Home</a>
+      <a href="#About">About</a>
+      <a href="#Download">Download</a>
     </aside>
 
     <section
       style="background-image: url('img/background/head.jpeg')"
       class="active"
     >
+      <div
+        class="magic"
+        style="background-image: url('img/background/head.jpeg')"
+      ></div>
+
       <div class="content">
-        <h1>Happenst1ce</h1>
+        <h1 id="Home">Happenst1ce</h1>
         <p>
           It's time to embark on a new adventure in Happenst1ce - are you ready
           to face its challenges?
         </p>
         <div class="buttons">
-          <a href="">About</a>
+          <a href="#Home">About</a>
           <a href="">About</a>
         </div>
       </div>
@@ -59,7 +65,7 @@
 
     <section style="background-image: url('img/background/about.jpeg')">
       <div class="content">
-        <h1>About</h1>
+        <h1 id="About">About</h1>
         <p>
           Happenst1ce is a mystical 2D RPG adventure game, brimming with
           obstacles, enemies, puzzles, and power-ups. Explore exotic locales,
@@ -75,7 +81,7 @@
 
     <section style="background-image: url('img/background/dow.jpeg')">
       <div class="content margin">
-        <h1>Download</h1>
+        <h1 id="Download">Download</h1>
         <div>
           <p>
             In the download section, you'll find everything you need to get
