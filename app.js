@@ -10,7 +10,6 @@ const closeMenu = () => {
 
 document.getElementById("xBtn").onclick = (e) => {
   e.preventDefault();
-  console.log("click");
   openMenu();
 };
 

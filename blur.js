@@ -50,6 +50,10 @@
     magic.style.top = e.pageY - magicWHalf + "px";
     magic.style.opacity = 1;
     resetTimer();
+    var ElementCssClass = document.getElementById("aside").className;
+    if (ElementCssClass === "active") {
+      magic.style.opacity = 0;
+    }
   });
 
   document.addEventListener("scroll", () => {
