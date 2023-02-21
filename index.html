@@ -18,11 +18,14 @@
     <script src="app.js" defer></script>
     <script src="scroll.js" defer></script>
     <script src="blur.js" defer></script>
-    <title>Happenst1ce</title>
+    <title>Happenst1ce - For1tess</title>
   </head>
   <body>
     <header>
-      <a href="#Home" class="logo">Happenst1ce</a>
+      <a href="#Home" class="logo-content"
+        ><img class="logo" src="/img/logo.png" alt="logo" />
+        <p>Happenst1ce</p>
+      </a>
       <nav class="right">
         <a href="#Home" class="desktop">Home</a>
         <a href="#About" class="desktop">About Happenst1ce</a>
@@ -56,11 +59,11 @@
 
       <div class="content">
         <h1 id="Home">Happenst1ce</h1>
-        <p>
+        <p class="homeText">
           It's time to embark on a new adventure - are you ready to face its
           challenges?
         </p>
-        <img src="/img/boyGIF.gif" alt="" />
+        <img class="prof" src="/img/charac/prof.png" alt="" />
       </div>
     </section>
 
@@ -70,23 +73,32 @@
     >
       <div class="content">
         <h1 id="About">About Happenst1ce</h1>
-        <p>
-          Happenst1ce is a mystical 2D RPG adventure game, brimming with
-          obstacles, enemies, puzzles, and power-ups. Explore exotic locales,
-          converse with NPCs, and unravel secrets hidden along the way. Join the
-          quest and let the magic of Happenst1ce enchant you!
-        </p>
+
+        <div class="text-background">
+          <p class="text morePadding">
+            Happenst1ce is a mystical 2D RPG adventure game, brimming with
+            obstacles, enemies, puzzles, and power-ups. Explore exotic locales,
+            converse with NPCs, and unravel secrets hidden along the way. Join
+            the quest and let the magic of Happenst1ce enchant you!
+          </p>
+          <img src="/img/charac/mom.png" alt="" />
+        </div>
+
         <div class="circleB">
           <i class="fa-solid fa-play playB"></i>
         </div>
-        <div class="" style="display: none">
+
+        <!-- <div style="display: none">
           <video controls>
             <source src="video/game.mp4" type="video/mp4" />
-
             Your browser does not support the video tag.
           </video>
-        </div>
+        </div> -->
       </div>
+      <canvas>
+        <img src="/img/charac/mom.png" alt="" />
+        <img src="/img/charac/mom.png" alt="" />
+      </canvas>
     </section>
 
     <section
@@ -95,16 +107,21 @@
     >
       <div class="content margin">
         <h1 id="Download">Join the quest</h1>
-        <div>
-          <p>
+
+        <div class="text-background">
+          <p class="text">
             Please note that Happenst1ce is currently only available on Windows.
             So, if you're ready to embrace the challenge and enter a world of
             wonder, ensure you have a Windows computer and download Happenst1ce
             today!
           </p>
+          <img src="/img/charac/rival.png" alt="" />
         </div>
+
         <div class="buttons">
-          <a class="notAvailable" href="">Download</a>
+          <a class="notAvailable" href=""
+            ><i class="fa-solid fa-download"></i> Download</a
+          >
         </div>
       </div>
     </section>
