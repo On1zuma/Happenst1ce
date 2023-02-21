@@ -1,4 +1,4 @@
-// Récupérez toutes les sections de votre page
+// Take all sections of the page
 const sections = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver(
@@ -14,11 +14,11 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.5, // Définissez un seuil de 50% pour déterminer quand une section est visible
+    threshold: 0.5,
   }
 );
 
-// Ajoutez chaque section à l'observeur d'intersection
+// Add each section to the intersection observer
 sections.forEach((section) => {
   observer.observe(section);
 });
