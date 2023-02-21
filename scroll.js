@@ -1,34 +1,24 @@
-document.lastScrollPosition = 0;
-document.lastCentered = 0;
-document.onWayTo = null; // prevent from scrolling when scroll animation
+// Récupérez toutes les sections de votre page
+const sections = document.querySelectorAll("section");
 
-document.addEventListener("scroll", () => {
-  const direction =
-    window.pageYOffset - document.lastScrollPosition > 0 ? "down" : "up"; // setting up the direction up or down
-  const sections = [...document.querySelectorAll("section")]; // getting all sections inside array
-
-  if (document.onWayTo === null) {
-    const destinationIndex =
-      direction === "up"
-        ? document.lastCentered - 1
-        : document.lastCentered + 1; // destination
-    if (destinationIndex >= 0 && destinationIndex < sections.length) {
-      //   window.scrollTo(0, sections[destinationIndex].offsetTop);
-      document.onWayTo = destinationIndex; // prevent from scrolling when scroll animation
-    }
-  }
-
-  sections.forEach((section, index) => {
-    if (window.pageYOffset === section.offsetTop) {
-      document.lastCentered = index;
-      section.className = "active";
-      if (document.onWayTo === index) {
-        document.onWayTo = null; // prevent scrolling
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add active class
+        entry.target.classList.add("active");
+      } else {
+        // Remove active class
+        entry.target.classList.remove("active");
       }
-    } else {
-      section.className = "";
-    }
-  }); //check the section
+    });
+  },
+  {
+    threshold: 0.5, // Définissez un seuil de 50% pour déterminer quand une section est visible
+  }
+);
 
-  document.lastScrollPosition = window.pageYOffset;
+// Ajoutez chaque section à l'observeur d'intersection
+sections.forEach((section) => {
+  observer.observe(section);
 });

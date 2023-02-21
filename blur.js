@@ -20,9 +20,11 @@
     }
   );
 
-  let timer;
+  let animationInProgress = false;
 
   userHasScrolled = false;
+  userHasClick = false;
+
   window.onscroll = function (e) {
     userHasScrolled = true;
   };
@@ -32,10 +34,11 @@
   });
 
   function resetTimer() {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
+    if (!animationInProgress) {
       magic.style.opacity = 0;
-    }, 500);
+      clearInterval();
+      timer = null;
+    }
   }
 
   function scrollDetection() {
@@ -45,14 +48,34 @@
     }
   }
 
+  document.body.addEventListener("click", function (e) {
+    if (!animationInProgress) {
+      magic.classList.add("animate");
+      magic.style.left = e.pageX - magicWHalf + "px";
+      magic.style.top = e.pageY - magicWHalf + "px";
+      magic.style.opacity = 0.9;
+      userHasClick = true;
+
+      animationInProgress = true;
+
+      var ElementCssClass = document.getElementById("aside").className;
+      if (ElementCssClass === "active") {
+        magic.style.opacity = 0;
+        animationInProgress = false;
+      }
+
+      setTimeout(function () {
+        magic.classList.remove("animate");
+        animationInProgress = false;
+        resetTimer();
+      }, 1000);
+    }
+  });
+
   document.body.addEventListener("mousemove", function (e) {
-    magic.style.left = e.pageX - magicWHalf + "px";
-    magic.style.top = e.pageY - magicWHalf + "px";
-    magic.style.opacity = 1;
-    resetTimer();
-    var ElementCssClass = document.getElementById("aside").className;
-    if (ElementCssClass === "active") {
-      magic.style.opacity = 0;
+    if (!animationInProgress) {
+      userHasClick = false;
+      resetTimer();
     }
   });
 
@@ -61,6 +84,8 @@
   });
 
   document.body.addEventListener("mouseout", function (e) {
-    resetTimer();
+    if (!animationInProgress) {
+      resetTimer();
+    }
   });
 })();
