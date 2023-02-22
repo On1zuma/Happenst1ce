@@ -85,6 +85,10 @@
     z-index: 15;
     height: 100vh;
   }
+
+  .magic {
+    transition: opacity 1s ease;
+  }
 }
 
 @media (max-width: 376px) {

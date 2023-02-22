@@ -55,6 +55,10 @@ header {
   color: white;
 }
 
+.burger {
+  font-size: 1.5rem;
+}
+
 nav.right {
   display: flex;
   align-items: center;
@@ -65,8 +69,19 @@ nav.right {
 nav.right a {
   margin-left: 3rem;
   color: white;
+  padding: 0.7rem;
 }
 
-.burger {
-  font-size: 1.5rem;
+nav.right a:hover {
+  text-shadow: #2e5f4f 1px 5px 10px;
+}
+
+/* nav link effect */
+#nav_slide_hover {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  height: 1px;
+  background-color: #ffffff;
+  border: none;
 }
