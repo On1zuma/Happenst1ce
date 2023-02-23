@@ -18,6 +18,8 @@ videoContainer.addEventListener("click", (event) => {
 });
 
 window.addEventListener("scroll", function (evt) {
-  videoContainer.classList.remove("active");
-  video.pause();
+  if (!document.fullscreenElement) {
+    videoContainer.classList.remove("active");
+    video.pause();
+  }
 });
