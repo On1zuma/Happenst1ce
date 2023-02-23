@@ -24,7 +24,7 @@
     observer.observe(section);
   });
 
-  //nav effect who move on scrolling
+  // Navbar effect
   let navLinks = document.querySelectorAll(".stroke a");
   let sideBarLinks = document.querySelectorAll("aside a");
   let hr = document.getElementById("nav_slide_hover");
@@ -78,27 +78,20 @@
     }
   }
 
+  // We check the current section and update the default position
+  const linkIndices = {
+    Home: 0,
+    About: 1,
+    Download: 2,
+  };
+
   setInterval(() => {
-    if (window.currentSectionID === "Home" && mousePosition === "out") {
-      setDefaultPosition(1);
-
-      sideBarLinks[0].classList.add("active");
-      sideBarLinks[1].classList.remove("active");
-      sideBarLinks[2].classList.remove("active");
-    } else if (window.currentSectionID === "About" && mousePosition === "out") {
-      setDefaultPosition(2);
-
-      sideBarLinks[0].classList.remove("active");
-      sideBarLinks[1].classList.add("active");
-      sideBarLinks[2].classList.remove("active");
-    } else if (
-      window.currentSectionID === "Download" &&
-      mousePosition === "out"
-    ) {
-      setDefaultPosition(3);
-      sideBarLinks[0].classList.remove("active");
-      sideBarLinks[1].classList.remove("active");
-      sideBarLinks[2].classList.add("active");
+    if (mousePosition === "out") {
+      const index = linkIndices[window.currentSectionID] || 0;
+      setDefaultPosition(index + 1);
+      sideBarLinks.forEach((link, i) => {
+        link.classList.toggle("active", i === index);
+      });
     }
   }, 400);
 })();

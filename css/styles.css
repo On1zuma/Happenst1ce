@@ -37,6 +37,7 @@ section {
 }
 
 .magic {
+  background-image: url("img/background/head.jpeg");
   inset: 0;
   position: absolute;
   width: 20rem;
@@ -45,7 +46,6 @@ section {
   background-size: cover;
   border-radius: 50%;
   z-index: 0;
-  /* transition: opacity 0s ease; */
   opacity: 0;
 }
 
@@ -257,4 +257,38 @@ aside .active {
 
 .backblur.active {
   display: block;
+}
+
+.video {
+  display: none;
+}
+
+.video.active {
+  display: block;
+  backdrop-filter: blur(7px);
+  z-index: 10;
+  position: absolute;
+  background-color: #0000006e;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video video {
+  max-width: 98%;
+  max-height: 98%;
+}
+
+.closevideo {
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  color: rgb(241, 241, 241);
 }

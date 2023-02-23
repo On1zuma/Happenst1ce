@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="shortcut icon" type="image/png" href="img/logoTop.png" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
     <script src="js/app.js" defer></script>
     <script src="js/scroll.js" defer></script>
     <script src="js/blur.js" defer></script>
-
+    <script src="js/video.js" defer></script>
     <title>Happenst1ce</title>
   </head>
   <body>
@@ -56,10 +56,9 @@
       style="background-image: url('img/background/head.jpeg')"
       class="active"
     >
-      <div
-        class="magic"
-        style="background-image: url('img/background/head.jpeg')"
-      ></div>
+      <canvas class="magic">
+        <div class="magic"></div>
+      </canvas>
 
       <div class="content">
         <h1 id="Home">Happenst1ce</h1>
@@ -87,22 +86,19 @@
           </p>
           <img src="/img/charac/mom.png" alt="" />
         </div>
-
-        <div class="circleB">
+        <div class="circleB" id="videoButton">
           <i class="fa-solid fa-play playB"></i>
         </div>
-
-        <!-- <div style="display: none">
-          <video controls>
-            <source src="video/game.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div> -->
       </div>
-      <canvas>
-        <img src="/img/charac/mom.png" alt="" />
-        <img src="/img/charac/mom.png" alt="" />
-      </canvas>
+
+      <div class="video">
+        <button class="closevideo"><i class="fa-solid fa-x"></i></button>
+
+        <video controls>
+          <source src="video/game.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </section>
 
     <section
