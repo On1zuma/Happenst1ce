@@ -1,3 +1,4 @@
+// aside navbar
 const openMenu = () => {
   document.querySelector(".backblur").className = "backblur active";
   document.querySelector("aside").className = "active";
@@ -20,3 +21,9 @@ document.querySelector("aside button.close").onclick = (e) => {
 document.querySelector(".backblur").onclick = (e) => {
   closeMenu();
 };
+
+// loading effect
+window.addEventListener("load", () => {
+  const loading = document.querySelector(".loading");
+  loading.classList.add("hidden");
+});
