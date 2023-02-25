@@ -76,6 +76,27 @@
 }
 
 @media (max-width: 576px) {
+  .info {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+  }
+
+  .infoSection #textInfo {
+    margin: 0rem;
+  }
+
+  .infoSection #textInfo p {
+    font-size: 0.85rem;
+    margin-top: 2rem;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  .infoSection #textInfo h2 {
+    font-size: 1.1rem;
+  }
+
   aside {
     transition: right 0.3s ease;
     position: fixed;

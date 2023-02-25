@@ -23,3 +23,22 @@ window.addEventListener("scroll", function (evt) {
     video.pause();
   }
 });
+
+// info section
+const infoButton = document.getElementById("infoButton");
+const infoSection = document.querySelector(".infoSection");
+const closeInfo = document.querySelector(".closeInfo");
+
+infoButton.addEventListener("click", () => {
+  infoSection.classList.add("active");
+});
+
+closeInfo.addEventListener("click", () => {
+  infoSection.classList.remove("active");
+});
+
+window.addEventListener("scroll", function (evt) {
+  if (!document.fullscreenElement) {
+    infoSection.classList.remove("active");
+  }
+});
