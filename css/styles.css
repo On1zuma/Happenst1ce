@@ -384,10 +384,10 @@ aside .active {
   transition: opacity 0.3s ease-in;
 
   opacity: 1;
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(8px);
   z-index: 10;
   position: absolute;
-  background-color: #ffffff;
+  background-color: #ffffffde;
   width: 100vw;
   height: 100vh;
 }
@@ -421,6 +421,8 @@ aside .active {
 .infoSection #textInfo h2 {
   font-family: "Phudu", cursive;
   font-size: 1.6rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .infoSection small {

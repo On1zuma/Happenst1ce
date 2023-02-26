@@ -42,3 +42,15 @@ window.addEventListener("scroll", function (evt) {
     infoSection.classList.remove("active");
   }
 });
+
+//character effects
+//Add hover effect to Professor image
+const prof = document.querySelector(".prof");
+
+prof.addEventListener("mouseover", () => {
+  prof.src = "/img/charac/gifProf.gif";
+});
+
+prof.addEventListener("mouseout", () => {
+  prof.src = "/img/charac/prof.png";
+});
