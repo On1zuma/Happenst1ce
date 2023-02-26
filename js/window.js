@@ -54,3 +54,14 @@ prof.addEventListener("mouseover", () => {
 prof.addEventListener("mouseout", () => {
   prof.src = "/img/charac/prof.png";
 });
+
+//Add hover effect to Mom image
+const mom = document.querySelector(".mom");
+
+mom.addEventListener("mouseover", () => {
+  mom.src = "/img/charac/gifMom.gif";
+});
+
+mom.addEventListener("mouseout", () => {
+  mom.src = "/img/charac/mom.png";
+});
