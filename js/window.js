@@ -65,3 +65,14 @@ mom.addEventListener("mouseover", () => {
 mom.addEventListener("mouseout", () => {
   mom.src = "/img/charac/mom.png";
 });
+
+//Add hover effect to Rival image
+const rival = document.querySelector(".rival");
+
+rival.addEventListener("mouseover", () => {
+  rival.src = "/img/charac/gifRival.gif";
+});
+
+rival.addEventListener("mouseout", () => {
+  rival.src = "/img/charac/rival.png";
+});
