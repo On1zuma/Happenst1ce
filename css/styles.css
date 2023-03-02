@@ -115,6 +115,8 @@ section .prof {
 }
 
 .text {
+  height: 150px;
+  width: 100%;
   color: rgba(255, 255, 255, 0.719);
   font-family: "Phudu", cursive;
   margin-top: 1rem;
@@ -124,6 +126,7 @@ section .prof {
   background-color: #6cc1a567;
   border: 3px solid #ffffff;
   border-radius: 15px;
+  text-align: left;
 }
 
 .morePadding {
@@ -172,6 +175,7 @@ section video {
 }
 
 section .buttons a {
+  cursor: pointer;
   display: block;
   margin-top: -4rem;
   color: inherit;

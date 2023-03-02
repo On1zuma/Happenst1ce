@@ -19,8 +19,13 @@
     /* filter: blur(-20px); */
   }
 
-  section .buttons a {
+  section .buttons .dow {
     display: none;
+  }
+
+  .nextB {
+    margin-left: 20vw;
+    margin-right: 20vw;
   }
 
   .circleB {
@@ -48,7 +53,12 @@
     margin-right: 1vw;
   }
 
+  .dial.text {
+    padding-bottom: 4rem;
+  }
+
   .text {
+    height: 170px;
     margin-top: 2rem;
     padding: 2rem 1rem 2rem 1rem;
   }

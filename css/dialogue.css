@@ -1,0 +1,93 @@
+html {
+  overflow: hidden;
+}
+
+section .buttonsEaster a {
+  display: block;
+  margin-top: -4rem;
+  color: inherit;
+  padding: 12px 50px;
+  border-radius: 7px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "Phudu", cursive;
+  border: 3px solid white;
+  color: white;
+  background-color: #44aa88;
+  letter-spacing: 0.1em;
+  width: 17rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -4rem;
+}
+
+section .buttonsEaster a:hover {
+  background-color: #6cc1a5;
+}
+
+.dial {
+  text-shadow: #2e5f4f 1px 0 10px;
+  background-color: #3f7a67e0;
+  border: 3px solid #ffffff;
+}
+
+#OurSection {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transform-origin: center;
+  animation-name: zoom;
+  animation-duration: 60s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  filter: blur(3px);
+}
+
+.bg1 {
+  background-image: url("../img/background/home.png");
+}
+
+.bg2 {
+  background-image: url("../img/background/forest.png");
+}
+
+.bg3 {
+  background-image: url("../img/background/training.png");
+}
+
+.bg4 {
+  background-image: url("../img/background/DatacenterMap.png");
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.linkTo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.text-background {
+  margin-top: 14vh;
+}
