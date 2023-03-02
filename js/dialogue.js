@@ -71,3 +71,14 @@ function changeBackground() {
 }
 
 setInterval(changeBackground, 11000);
+
+//Add hover effect to prof image
+const prof = document.querySelector(".prof");
+
+prof.addEventListener("mouseover", () => {
+  prof.src = "/img/charac/gifProfv2.gif";
+});
+
+prof.addEventListener("mouseout", () => {
+  prof.src = "/img/charac/prof.png";
+});
