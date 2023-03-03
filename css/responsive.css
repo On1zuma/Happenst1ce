@@ -58,7 +58,7 @@
   }
 
   .text {
-    height: 170px;
+    height: auto;
     margin-top: 2rem;
     padding: 2rem 1rem 2rem 1rem;
   }

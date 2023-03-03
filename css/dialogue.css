@@ -91,3 +91,32 @@ section .buttonsEaster a:hover {
 .text-background {
   margin-top: 14vh;
 }
+
+.text {
+  height: 170px;
+}
+
+@media (max-width: 968px) {
+  .text {
+    height: 200px;
+  }
+
+  .text-background img {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 5vh;
+  }
+}
+
+@media (max-width: 376px) {
+  .text {
+    height: auto;
+  }
+
+  .text-background img {
+    bottom: 10vh;
+  }
+}
