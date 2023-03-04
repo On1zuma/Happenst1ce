@@ -440,3 +440,8 @@ aside .active {
   text-align: center;
   font-size: 0.7rem;
 }
+
+.linkTo {
+  margin-left: auto;
+  margin-right: auto;
+}

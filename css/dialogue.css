@@ -73,11 +73,6 @@ section .buttonsEaster a:hover {
   }
 }
 
-.linkTo {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .fade-out {
   opacity: 0;
   transition: opacity 1s ease-in-out;
