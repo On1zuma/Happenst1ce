@@ -6,6 +6,8 @@ Happenst1ce - A 2D RPG Adventure Game
 
 Happenst1ce is a 2D role-playing game that allows players to immerse themselves in a whimsical world filled with adventure and excitement. As the player, you will be tasked with navigating through various levels, engaging in combat, and completing quests in order to progress further through the game.
 
+The Happenst1ce game has been developed from the ground up using the Java programming language. This means that every aspect of the game, from the game mechanics to the graphics, has been programmed using Java.
+
 ## Features
 
 - A captivating storyline with intriguing characters
