@@ -1,5 +1,7 @@
 # Happenst1ce
 
+![image](https://github.com/On1zuma/Happenst1ce/assets/96482486/04023df4-ed2b-40ed-879a-f1d2eb6f736b)
+
 Happenst1ce - A 2D RPG Adventure Game
 
 ## Introduction
